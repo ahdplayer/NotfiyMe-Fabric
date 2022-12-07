@@ -10,10 +10,11 @@
   ],
   "contact": {
     "homepage": "https://modrinth.com/mod/notifyme",
-    "sources": "https://github.com/ahdplayer/NotfiyMe-Fabric"
+    "sources": "https://github.com/ahdplayer/NotfiyMe-Fabric",
+    "issues": "https://github.com/ahdplayer/NotfiyMe-Fabric/issues"
   },
 
-  "license": "CC0-1.0",
+  "license": "MIT",
   "icon": "/assets/notifyme/icon.png",
 
   "environment": "*",
@@ -33,6 +34,19 @@
     "java": ">=17"
   },
   "suggests": {
-    "another-mod": "*"
+    "modmenu": "*"
+  },
+  "custom": {
+    "modmenu": {
+      "links": {
+        "modmenu.discord": "https://discord.gg/yccknYqnrn"
+      },
+      "parent": {
+        "id": "notifyme",
+        "name": "Notify Me",
+        "description": "Get a notification sound when somebody types your name in chat!",
+        "icon": "assets/notifyme/icon.png"
+      }
+    }
   }
 }

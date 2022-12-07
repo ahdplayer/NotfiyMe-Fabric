@@ -24,11 +24,8 @@ public class Helper {
 
 
     public static int Notify(CommandContext<FabricClientCommandSource> context) {
-        PlayerEntity player = context.getSource().getPlayer();
-        World world = player.getWorld();
         Main.notify = !Main.notify;
         context.getSource().sendFeedback(Text.literal("notify = " + Main.notify));
-        BlockPos blockPos = player.getBlockPos();
 
         return 0;
     }
