@@ -40,12 +40,6 @@
     "modmenu": {
       "links": {
         "modmenu.discord": "https://discord.gg/yccknYqnrn"
-      },
-      "parent": {
-        "id": "notifyme",
-        "name": "Notify Me",
-        "description": "Get a notification sound when somebody types your name in chat!",
-        "icon": "assets/notifyme/icon.png"
       }
     }
   }
