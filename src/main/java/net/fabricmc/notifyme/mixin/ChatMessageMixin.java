@@ -13,13 +13,14 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 
+
 @Mixin(MessageHandler.class)
 public class ChatMessageMixin {
 	@Inject(method = "onChatMessage", at = @At("RETURN"))
 	public void onGameMessage(SignedMessage message, GameProfile sender, MessageType.Parameters params, CallbackInfo ci) {
 		String msg = message.getSignedContent().toLowerCase();
 		if (Main.notify) {
-			if (msg.contains(Main.playername)) {
+			if (Helper.checkNotifyList(msg)) {
 				Helper.PlaySound();
 			}
 		}
